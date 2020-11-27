@@ -439,6 +439,8 @@ Error message and password prompt
 
 <li>Removing Events from Promoter Reports</li>
 
+<li>Select List From Excel</li>
+
 <li>Tag Customers</li>
 
 </ul>
@@ -9879,7 +9881,7 @@ Error message and password prompt
 <div created="20201127154730464" modified="20201127155810522" title="$:/SiteTitle">
 <pre>Manuel's Box Office Manual</pre>
 </div>
-<div created="20201127170418666" modified="20201127170634402" title="$:/state/editpreviewtype">
+<div created="20201127170418666" modified="20201127190423787" title="$:/state/editpreviewtype">
 <pre>$:/core/ui/EditTemplate/body/preview/output</pre>
 </div>
 <div created="20201127184118056" modified="20201127184150751" title="$:/state/folded/$:/ControlPanel">
@@ -9897,7 +9899,7 @@ Error message and password prompt
 <div created="20201127170255206" modified="20201127170526281" title="$:/state/image-picker/system-117015135">
 <pre>show</pre>
 </div>
-<div created="20201127162649468" modified="20201127170631901" title="$:/state/showeditpreview">
+<div created="20201127162649468" modified="20201127192050021" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20201127163800342" modified="20201127184213812" title="$:/state/tab--1963855381">
@@ -9918,8 +9920,8 @@ Error message and password prompt
 <div created="20201127161552796" modified="20201127181521072" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20201127161551051" modified="20201127185658803" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20201127161551051" modified="20201127191806388" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20201127183902958" modified="20201127184231741" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -9927,7 +9929,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201127163021719" list="[[Event Cancel]]" modified="20201127185919913" title="$:/StoryList">
+<div created="20201127163021719" list="[[Event Cancel]]" modified="20201127192033804" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20201127173453663" modified="20201127173453663" title="$:/temp/advancedsearch">
@@ -11071,7 +11073,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20201127185629895" modified="20201127185654202" tags="Event Promoter Report" title="Adding one-offs to Promoter Reports">
 <pre></pre>
 </div>
-<div created="20201127160835641" modified="20201127190112604" tags="Event Cancel [[Order Fee]] Refund [[Event Cancel]]" title="Event Cancel">
+<div created="20201127160835641" modified="20201127193112664" tags="Event Cancel [[Order Fee]] Refund [[Event Cancel]]" title="Event Cancel">
 <pre>!! Run Reports &amp; Save to EVENT folder
 
 #Run Integrity `TK.INEGRITY.EVENT` including Counter Holds and fix any issues
@@ -11089,7 +11091,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 
 #Go into Events `TK.EVENT.SEA.E` and remove group field, and any email address behind Event Misc button
 #&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/reports.jpg]]
-##If a one-off promoter report schedule exists (eg ''NOT'' Sonic, Live Nation, Evenko etc...), must be deleted from [[equerry|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=AdminSchedules]]. 
+##If a one-off promoter report schedule exists (eg ''NOT'' Sonic, Live Nation, Evenko etc...), must be deleted from [[eQuery|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=AdminSchedules]]. 
 
 #If applicable, remove event from any applicable mPac Pac7 control(s) `TK.ETCONTROL.E`.
 
@@ -11098,21 +11100,36 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 ##&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/eventcancelgrouping.jpg]]
 ##''If Casino Event''--Look under House Account &quot;H&quot;, and &quot;CAS&quot; note those account numbers.  They will also have to be returned separately.
 
-!!Running Event Cancel &amp; Order Fee Cancel
+!!Running Event Cancel
 #Run Event Cancel on Individuals.  
 #&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/eventcancelscreen.jpg]]
-#*''Sale Code'': A (straight online / phone orders)--may change depending on circumstance.  
-#*''CA Mode'':  I
-#*''Paymodes'':  MC, VI, AX
-#*''Customer'':  Individual
-#*''Ticket Charge'': Cancel
+#*''Sale Code'': `A` (straight online / phone orders)--may change depending on circumstance.  
+#*''CA Mode'':  `I`
+#*''Paymodes'':  `MC`, `VI`, `AX`
+#*''Customer'':  `Individual`
+#*''Ticket Charge'': 'Cancel'
 #*USE [[SELECT LIST|Select Lists]] IF EXCLUDING CUSTOMERS. 
 #''If Casino'': Run again, but instead use:
-#*''Customer'': House. 
-#*''Salecode'':  CASINO
-#*''Paymode'':  Blank
+#*''Customer'': `House`. 
+#*''Salecode'':  `CASINO`
+#*''Paymode'':  Leave blank
 #*Either enter Casino House Account numbers manually under &quot;Customer&quot;, or create and use a &quot;[[Select List|Select Lists]]&quot;
-##Revisit Casino House accounts and sell to CAS, Salecode: CASINO.  You may run TK.ORDER.R on Credit Balance for list.</pre>
+##Revisit Casino House accounts and sell to CAS, Salecode: CASINO.  You may run TK.ORDER.R on Credit Balance for list.
+
+!!Running Order Fee Cancellation
+!!!''To have this cancellation included in the [[Event Cancel Confirmation]] Email, use the same batch is Event Cancel''
+
+#Create select list of transactions that include the Order Fee to be cancelled
+#*You may use this [[equery|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=ReportDetails&amp;reportId=108101639]] report and import the [[select list from excel|Select List From Excel]].
+#**Update the season and event code in the Native Query
+# Fill out screen
+#*''Order Charge'': `O` (usually--but use whichever Order Charge code you'd like to cancel
+#*''Select List - Trans'': The newly created Select List code
+#*''Sale Code'': Usually `A`
+#*''CA Mode'': `I`
+#*''Refund Paymodes'': One per line `MC`, `VI`, `AX`
+#*&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/orderfeecancel.jpg]]
+</pre>
 </div>
 <div created="20201127184503195" modified="20201127185423124" tags="Credit [[Card Number]] Cybersouce Authorization" title="Incorrect Credit Card Number Chargeback">
 <pre>!!To use Pending to cancel out a payment transaction--reversing out of a transaction accepted by T.Res but ''not'' [[Cybersource|https://ebc.cybersource.com/ebc2/]]
@@ -11128,6 +11145,19 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 </div>
 <div created="20201127185555388" modified="20201127185626933" tags="Event Promoter Report Remove" title="Removing Events from Promoter Reports">
 <pre></pre>
+</div>
+<div created="20201127191010213" modified="20201127191754788" tags="Excel Select List eQuery" title="Select List From Excel">
+<pre>!!You can create a list on excel (or exported from eQuerry) to then copy/paste into a Select List.
+
+# On T.Res, hit ``0`` on the Main Screen
+# ``ED &amp;SAVEDLISTS&amp; LISTNAME`` replacing `LISTNAME` with the name of the Select List you'd like to use. 
+#`I` to insert into the Select List
+#Copy list to be copied into the Select List
+#*''If Order Fee Cancellation'': Must copy ZID column. 
+#Past from the SBClient toolbar
+#On an empty space, hit `Enter`
+#`FI` to &quot;file in&quot; the select list.
+#`MM` to return to T.Res main menu</pre>
 </div>
 <div created="20201127182220677" modified="20201127184131925" tags="Customers Pac7 Import PacPlatform [[Event Cancel]]" title="Tag Customers">
 <pre>!!Create a CSV file with fields `CustomerID` and `TAG` you'd like to import.
