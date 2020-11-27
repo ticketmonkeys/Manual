@@ -411,8 +411,6 @@ Error message and password prompt
 
 <li>Event Cancel</li>
 
-<li>groupreports</li>
-
 </ul>
 </p>
 
@@ -9866,16 +9864,16 @@ Error message and password prompt
 <div created="20201127153053552" modified="20201127163755926" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20201127161552796" modified="20201127170550197" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Orphans</pre>
+<div created="20201127161552796" modified="20201127181521072" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20201127161551051" modified="20201127174719002" title="$:/state/tab/sidebar--595412856">
+<div created="20201127161551051" modified="20201127181525967" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201127163021719" list="[[Event Cancel]]" modified="20201127181318750" title="$:/StoryList">
+<div created="20201127163021719" list="[[Event Cancel]]" modified="20201127181456203" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20201127173453663" modified="20201127173453663" title="$:/temp/advancedsearch">
@@ -11007,7 +11005,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20201127160835641" modified="20201127181313309" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
+<div created="20201127160835641" modified="20201127182030945" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
 <pre>!!! Run Reports &amp; Save to EVENT folder
 
 #Run Integrity `TK.INEGRITY.EVENT` including Counter Holds and fix any issues
@@ -11042,10 +11040,13 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 #*''Paymodes'':  MC, VI, AX
 #*''Customer'':  Individual
 #*''Ticket Charge'': Cancel
-#*USE [[SELECT LIST|Select Lists]] IF EXCLUDING CUSTOMERS. </pre>
-</div>
-<div created="20201127174550452" modified="20201127174739558" tags="images" title="groupreports">
-<pre>[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/reports.jpg]]</pre>
+#*USE [[SELECT LIST|Select Lists]] IF EXCLUDING CUSTOMERS. 
+#''If Casino'': Run again, but instead use:
+#*''Customer'': House. 
+#*''Salecode'':  CASINO
+#*''Paymode'':  Blank
+#*Either enter Casino House Account numbers manually under &quot;Customer&quot;, or create and use a &quot;[[Select List|Select Lists]]&quot;
+##Revisit Casino House accounts and sell credit balance to CAS.</pre>
 </div>
 
 
