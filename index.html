@@ -11007,7 +11007,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20201127160835641" modified="20201127175514199" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
+<div created="20201127160835641" modified="20201127180453317" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
 <pre>!!! Run Reports &amp; Save to EVENT folder
 
 #Run Integrity `TK.INEGRITY.EVENT` including Counter Holds and fix any issues
@@ -11025,19 +11025,22 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 
 #Go into Events `TK.EVENT.SEA.E` and remove group field, and any email address behind Event Misc button
 #&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/reports.jpg]]
-##If a one-off promoter report schedule, must be deleted from [[equerry|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=AdminSchedules]]. 
+##If a one-off promoter report schedule exists (eg ''NOT'' Sonic, Live Nation, Evenko etc...), must be deleted from [[equerry|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=AdminSchedules]]. 
 
 #If applicable, remove event from any applicable mPac Pac7 control(s) `TK.ETCONTROL.E`.
 
-# Using the same eQuery as before:
-##Group by &quot;Account&quot; &amp; &quot;Mode&quot; and verify that all Individual accounts only have Credit Card payments.  Exclude those who haven't.
-##If Casino Event--Look under House Account &quot;H&quot;, and &quot;CAS&quot; note those account numbers.  They will also have to be returned separately.
+# Using the same [[report|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=ReportDetails&amp;reportId=103677980]] as before:
+##Group by &quot;Account&quot; &amp; &quot;Mode&quot; and verify that all Individual accounts only have Credit Card payments.  ''Exclude those who haven't''.
+##&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/eventcancelgrouping.jpg]]
+##''If Casino Event''--Look under House Account &quot;H&quot;, and &quot;CAS&quot; note those account numbers.  They will also have to be returned separately.
+
+!!Running Event Cancel &amp; Order Fee Cancel
 #Run Event Cancel on Individuals.  
-##Sale Code: A (straight online / phone orders)--may change depending on circumstance.  
-##CA Mode:  I
-##Paymodes:  MC, VI, AX
-##Customer:  Individual
-##Ticket Charge: Cancel (doesn't touch order charge)</pre>
+#*Sale Code: A (straight online / phone orders)--may change depending on circumstance.  
+#*CA Mode:  I
+#*Paymodes:  MC, VI, AX
+#*Customer:  Individual
+#*Ticket Charge: Cancel (doesn't touch order charge)</pre>
 </div>
 <div created="20201127174550452" modified="20201127174739558" tags="images" title="groupreports">
 <pre>[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/reports.jpg]]</pre>
