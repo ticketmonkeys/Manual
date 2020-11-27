@@ -409,7 +409,11 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Draft of 'Event Cancel'</li>
+
 <li>Event Cancel</li>
+
+<li>groupreports</li>
 
 </ul>
 </p>
@@ -9873,7 +9877,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201127163021719" list="[[Event Cancel]]" modified="20201127173453627" title="$:/StoryList">
+<div created="20201127163021719" list="[[Draft of 'Event Cancel']]" modified="20201127173453627" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20201127173453663" modified="20201127173453663" title="$:/temp/advancedsearch">
@@ -11005,7 +11009,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20201127160835641" modified="20201127173650168" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
+<div created="20201127160835641" draft.of="Event Cancel" draft.title="Event Cancel" modified="20201127174427444" tags="Event Cancel [[Order Fee]] Refund" title="Draft of 'Event Cancel'">
 <pre>!!! Run Reports &amp; Save to EVENT folder
 #Run Integrity `TK.INEGRITY.EVENT` including Counter Holds and fix any issues
 ##Rerun to 'H'--[[Open Case|https://paciolan.force.com/service/login]]
@@ -11015,7 +11019,35 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 !!! Account Tagging &amp; Checks
 #[[Tag Customers]] with existing orders using `EC.EVENTCODE.QTY.PL.PT` as a template-- (eg:  EC.1MA22.3.2.A for Michael Bubble x 3, PL 2, PT A)
 ##Use  this [[report|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=ReportDetails&amp;reportId=103677980]]
-##Update Native Query at //***UPDATE HERE***// with event code and season use `%` as a wildcard.
+##Update Native Query at //***UPDATE HERE***// with event code and season.  Use `%` as a wildcard if needed
+#Go into Events `TK.EVENT.SEA.E` and remove group field, and any email address behind Event Misc button
+##If a one-off promoter report schedule, must be deleted from [[equerry|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=AdminSchedules]]. 
+#If applicable, remove event from any applicable mPac Pac7 control(s) `TK.ETCONTROL.E`.
+
+[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/reports.jpg]]
+[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/equeryevtcxl.jpg]]
+
+# Using the same eQuery as before:
+##Group by &quot;Account&quot; &amp; &quot;Mode&quot; and verify that all Individual accounts only have Credit Card payments.  Exclude those who haven't.
+##If Casino Event--Look under House Account &quot;H&quot;, and &quot;CAS&quot; note those account numbers.  They will also have to be returned separately.
+#Run Event Cancel on Individuals.  
+##Sale Code: A (straight online / phone orders)--may change depending on circumstance.  
+##CA Mode:  I
+##Paymodes:  MC, VI, AX
+##Customer:  Individual
+##Ticket Charge: Cancel (doesn't touch order charge)</pre>
+</div>
+<div created="20201127160835641" modified="20201127173853129" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
+<pre>!!! Run Reports &amp; Save to EVENT folder
+#Run Integrity `TK.INEGRITY.EVENT` including Counter Holds and fix any issues
+##Rerun to 'H'--[[Open Case|https://paciolan.force.com/service/login]]
+#Run Audit `TK.AUDIT.R`, Order Detail `TK.ORDER.R`, and Ordered Seats `TK.OSEATS.R` to Excel and save to the [[Event Folder|file:///U:/Box%20Office/box/EVENT/]].
+##Double check there are no amount owing/due for the event before proceeding.  Fix any issues. 
+
+!!! Account Tagging &amp; Checks
+#[[Tag Customers]] with existing orders using `EC.EVENTCODE.QTY.PL.PT` as a template-- (eg:  EC.1MA22.3.2.A for Michael Bubble x 3, PL 2, PT A)
+##Use  this [[report|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=ReportDetails&amp;reportId=103677980]]
+##Update Native Query at //***UPDATE HERE***// with event code and season.  Use `%` as a wildcard if needed
 #Go into Events `TK.EVENT.SEA.E` and remove group field, and any email address behind Event Misc button
 ##If a one-off promoter report schedule, must be deleted from [[equerry|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=AdminSchedules]]. 
 #If applicable, remove event from any applicable mPac Pac7 control(s) `TK.ETCONTROL.E`.
@@ -11032,6 +11064,9 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 ##Paymodes:  MC, VI, AX
 ##Customer:  Individual
 ##Ticket Charge: Cancel (doesn't touch order charge)</pre>
+</div>
+<div created="20201127174550452" modified="20201127174614146" tags="images" title="groupreports">
+<pre>[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/reports.jpg]]</pre>
 </div>
 
 
