@@ -435,7 +435,7 @@ Error message and password prompt
 
 <li>Event Cancel</li>
 
-<li>Event Cancel Confirmation</li>
+<li>Event Cancel Confirmation Email</li>
 
 <li>Incorrect Credit Card Number Chargeback</li>
 
@@ -9922,7 +9922,7 @@ Error message and password prompt
 <div created="20201127161552796" modified="20201127181521072" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20201127161551051" modified="20201127191806388" title="$:/state/tab/sidebar--595412856">
+<div created="20201127161551051" modified="20201127195222777" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20201127183902958" modified="20201127184231741" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -9931,7 +9931,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201127163021719" list="[[Event Cancel]] [[Event Cancel Confirmation]]" modified="20201127193247269" title="$:/StoryList">
+<div created="20201127163021719" list="" modified="20201127195225051" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20201127173453663" modified="20201127173453663" title="$:/temp/advancedsearch">
@@ -11075,7 +11075,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20201127185629895" modified="20201127185654202" tags="Event Promoter Report" title="Adding one-offs to Promoter Reports">
 <pre></pre>
 </div>
-<div created="20201127160835641" modified="20201127193112664" tags="Event Cancel [[Order Fee]] Refund [[Event Cancel]]" title="Event Cancel">
+<div created="20201127160835641" modified="20201127195155827" tags="Event Cancel [[Order Fee]] Refund [[Event Cancel]]" title="Event Cancel">
 <pre>!! Run Reports &amp; Save to EVENT folder
 
 #Run Integrity `TK.INEGRITY.EVENT` including Counter Holds and fix any issues
@@ -11131,11 +11131,24 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 #*''CA Mode'': `I`
 #*''Refund Paymodes'': One per line `MC`, `VI`, `AX`
 #*&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/orderfeecancel.jpg]]
+
+!!Sending Confirmation Email
+&lt;$transclude tiddler=&quot;Event Cancel Confirmation&quot; mode=&quot;block&quot;/&gt;
 </pre>
 </div>
-<div created="20201127193317916" modified="20201127193714191" title="Event Cancel Confirmation">
+<div created="20201127193317916" modified="20201127195244930" tags="event cancel confirmation email" title="Event Cancel Confirmation Email">
 <pre>#Navigate to [[this|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=ReportRun&amp;reportId=108101640]] eQuery report
-#Update Batch &amp; Event Name info, and run</pre>
+#Update Batch &amp; Event Name info:
+##Run &amp; verify
+#If all seems fine and ready to send;
+##Navigate to `Schedules` tab
+###Highlight //red// schedule and click `Edit`
+###Uncheck `Disable`
+###Navigate to `Report Parameters` &amp; update
+###Click `Run Now`
+###`Save`
+#Once the report schedule is run:
+##Go back in and check `Disable`</pre>
 </div>
 <div created="20201127184503195" modified="20201127185423124" tags="Credit [[Card Number]] Cybersouce Authorization" title="Incorrect Credit Card Number Chargeback">
 <pre>!!To use Pending to cancel out a payment transaction--reversing out of a transaction accepted by T.Res but ''not'' [[Cybersource|https://ebc.cybersource.com/ebc2/]]
