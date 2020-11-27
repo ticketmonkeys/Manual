@@ -145,7 +145,15 @@ Error message and password prompt
 
 <li>$:/config/DownloadSaver/AutoSave</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/fold-all</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/storyview</li>
+
+<li>$:/config/TextEditor/EnableToolbar</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar</li>
 
 <li>$:/core</li>
 
@@ -171,7 +179,11 @@ Error message and password prompt
 
 <li>$:/state/editpreviewtype</li>
 
+<li>$:/state/folded/$:/ControlPanel</li>
+
 <li>$:/state/folded/Event Cancel</li>
+
+<li>$:/state/folded/Tag Customers</li>
 
 <li>$:/state/image-picker/system--1365487189</li>
 
@@ -192,6 +204,8 @@ Error message and password prompt
 <li>$:/state/tab/moresidebar-1850697562</li>
 
 <li>$:/state/tab/sidebar--595412856</li>
+
+<li>$:/state/tabs/controlpanel/toolbars-1345989671</li>
 
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
@@ -403,6 +417,8 @@ Error message and password prompt
 
 <li>$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary</li>
 
+<li>$:/temp/search</li>
+
 <li>$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html</li>
 
 <li>$:/theme</li>
@@ -411,7 +427,17 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
+<li>Adding new Events to Promoter Reports</li>
+
+<li>Adding one-offs to Promoter Reports</li>
+
 <li>Event Cancel</li>
+
+<li>Incorrect Credit Card Number Chargeback</li>
+
+<li>Removing Events from Promoter Reports</li>
 
 <li>Tag Customers</li>
 
@@ -435,7 +461,19 @@ Error message and password prompt
 <div created="20201127155819992" modified="20201127161041955" title="$:/config/DownloadSaver/AutoSave">
 <pre>no</pre>
 </div>
+<div created="20201127183922961" modified="20201127183922961" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/fold-all">
+<pre>show</pre>
+</div>
 <div created="20201127171628118" modified="20201127171628966" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/storyview">
+<pre>hide</pre>
+</div>
+<div created="20201127184019261" modified="20201127184022605" title="$:/config/TextEditor/EnableToolbar">
+<pre>yes</pre>
+</div>
+<div created="20201127184241512" modified="20201127184241512" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold">
+<pre>show</pre>
+</div>
+<div created="20201127184238491" modified="20201127184240785" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar">
 <pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.22">
@@ -9844,7 +9882,13 @@ Error message and password prompt
 <div created="20201127170418666" modified="20201127170634402" title="$:/state/editpreviewtype">
 <pre>$:/core/ui/EditTemplate/body/preview/output</pre>
 </div>
+<div created="20201127184118056" modified="20201127184150751" title="$:/state/folded/$:/ControlPanel">
+<pre>show</pre>
+</div>
 <div created="20201127182541675" modified="20201127183708520" title="$:/state/folded/Event Cancel">
+<pre>show</pre>
+</div>
+<div created="20201127184118056" modified="20201127184306843" title="$:/state/folded/Tag Customers">
 <pre>show</pre>
 </div>
 <div created="20201127170312446" modified="20201127170313213" title="$:/state/image-picker/system--1365487189">
@@ -9856,8 +9900,8 @@ Error message and password prompt
 <div created="20201127162649468" modified="20201127170631901" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20201127163800342" modified="20201127163800342" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Palette</pre>
+<div created="20201127163800342" modified="20201127184213812" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
 <div created="20201127155812358" modified="20201127155812358" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -9865,8 +9909,8 @@ Error message and password prompt
 <div created="20201127172601388" modified="20201127172603894" title="$:/state/tab--219645345">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Languages</pre>
 </div>
-<div created="20201127153049978" modified="20201127172544273" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Plugins</pre>
+<div created="20201127153049978" modified="20201127184211821" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20201127153053552" modified="20201127163755926" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
@@ -9874,13 +9918,16 @@ Error message and password prompt
 <div created="20201127161552796" modified="20201127181521072" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20201127161551051" modified="20201127183721272" title="$:/state/tab/sidebar--595412856">
+<div created="20201127161551051" modified="20201127185658803" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
+</div>
+<div created="20201127183902958" modified="20201127184231741" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201127163021719" list="" modified="20201127183659911" title="$:/StoryList">
+<div created="20201127163021719" list="[[Event Cancel]]" modified="20201127185919913" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20201127173453663" modified="20201127173453663" title="$:/temp/advancedsearch">
@@ -10897,6 +10944,9 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20201127172555136" modified="20201127172555637" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre>image</pre>
 </div>
+<div created="20201127185916648" modified="20201127185918132" title="$:/temp/search">
+<pre>event cancel</pre>
+</div>
 <div created="20201127172551265" modified="20201127172551265" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
 </div>
@@ -11012,7 +11062,16 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20201127160835641" modified="20201127183714762" tags="Event Cancel [[Order Fee]] Refund [[Event Cancel]]" title="Event Cancel">
+<div created="20201127184111101" modified="20201127184111101" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<pre>fluid-fixed</pre>
+</div>
+<div created="20201127185519482" modified="20201127185550763" tags="Event Report Promoter Add" title="Adding new Events to Promoter Reports">
+<pre></pre>
+</div>
+<div created="20201127185629895" modified="20201127185654202" tags="Event Promoter Report" title="Adding one-offs to Promoter Reports">
+<pre></pre>
+</div>
+<div created="20201127160835641" modified="20201127190112604" tags="Event Cancel [[Order Fee]] Refund [[Event Cancel]]" title="Event Cancel">
 <pre>!! Run Reports &amp; Save to EVENT folder
 
 #Run Integrity `TK.INEGRITY.EVENT` including Counter Holds and fix any issues
@@ -11034,7 +11093,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 
 #If applicable, remove event from any applicable mPac Pac7 control(s) `TK.ETCONTROL.E`.
 
-# Using the same [[report|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=ReportDetails&amp;reportId=103677980]] as before:
+# Using [[this|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=ReportDetails&amp;reportId=103677980]] equery report:
 ##Group by &quot;Account&quot; &amp; &quot;Mode&quot; and verify that all Individual accounts only have Credit Card payments.  ''Exclude those who haven't''.
 ##&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/eventcancelgrouping.jpg]]
 ##''If Casino Event''--Look under House Account &quot;H&quot;, and &quot;CAS&quot; note those account numbers.  They will also have to be returned separately.
@@ -11055,7 +11114,22 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 #*Either enter Casino House Account numbers manually under &quot;Customer&quot;, or create and use a &quot;[[Select List|Select Lists]]&quot;
 ##Revisit Casino House accounts and sell to CAS, Salecode: CASINO.  You may run TK.ORDER.R on Credit Balance for list.</pre>
 </div>
-<div created="20201127182220677" modified="20201127183720033" tags="Customers Pac7 Import PacPlatform [[Event Cancel]]" title="Tag Customers">
+<div created="20201127184503195" modified="20201127185423124" tags="Credit [[Card Number]] Cybersouce Authorization" title="Incorrect Credit Card Number Chargeback">
+<pre>!!To use Pending to cancel out a payment transaction--reversing out of a transaction accepted by T.Res but ''not'' [[Cybersource|https://ebc.cybersource.com/ebc2/]]
+
+# Using the ``MGR`` control
+#*Process definition 
+#*Payment details
+#*Change CA mode at the top from ``I`` (immediate) to `P` (pending)
+#&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/incorrectcardnumbers.jpg]]
+#Go to season and the payment screen to cancel out the Visa total
+#Contact Paciolan to cancel the pending Visa so it doesn’t go through
+#Change ``MGR`` back to mode ``I``</pre>
+</div>
+<div created="20201127185555388" modified="20201127185626933" tags="Event Promoter Report Remove" title="Removing Events from Promoter Reports">
+<pre></pre>
+</div>
+<div created="20201127182220677" modified="20201127184131925" tags="Customers Pac7 Import PacPlatform [[Event Cancel]]" title="Tag Customers">
 <pre>!!Create a CSV file with fields `CustomerID` and `TAG` you'd like to import.
 #Log onto [[Pac7|https://client.paciolan.com/site/tcl]] with Admin Credentials
 ##Navigate to Accounts
@@ -11063,7 +11137,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 ## &quot;Account Import&quot;
 
 #Choose &quot;TAG&quot; as the configuration
-#*It's been prepgrogrammed to pull 1st column as the Account Number and 2nd as TAG field.
+#*It's been prepgrogrammed to pull 1st column as the ``Account Number`` and 2nd as ``TAG`` field.
 
 #Choose the CSV file to to import
 #If it's the case, check ``Ignore the first record.  My data file has a header row``.
@@ -11071,7 +11145,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 #Next
 #&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/customertag.jpg]]
 
-#Double check the mapping once in Review with the example provided
+#Once in review, double check the mapping with the example provided
 #*If incorrect, change CSV to match and start over.  
 
 #Give the job a name and leave an email if you'd like notification when complete.  Then, &quot;Submit&quot;
