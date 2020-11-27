@@ -171,6 +171,8 @@ Error message and password prompt
 
 <li>$:/state/editpreviewtype</li>
 
+<li>$:/state/folded/Event Cancel</li>
+
 <li>$:/state/image-picker/system--1365487189</li>
 
 <li>$:/state/image-picker/system-117015135</li>
@@ -410,6 +412,8 @@ Error message and password prompt
 <li>$:/themes/tiddlywiki/vanilla</li>
 
 <li>Event Cancel</li>
+
+<li>Tag Customers</li>
 
 </ul>
 </p>
@@ -9840,6 +9844,9 @@ Error message and password prompt
 <div created="20201127170418666" modified="20201127170634402" title="$:/state/editpreviewtype">
 <pre>$:/core/ui/EditTemplate/body/preview/output</pre>
 </div>
+<div created="20201127182541675" modified="20201127182541675" title="$:/state/folded/Event Cancel">
+<pre>hide</pre>
+</div>
 <div created="20201127170312446" modified="20201127170313213" title="$:/state/image-picker/system--1365487189">
 <pre>hide</pre>
 </div>
@@ -9867,13 +9874,13 @@ Error message and password prompt
 <div created="20201127161552796" modified="20201127181521072" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20201127161551051" modified="20201127181525967" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20201127161551051" modified="20201127182617143" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201127163021719" list="[[Event Cancel]]" modified="20201127181456203" title="$:/StoryList">
+<div created="20201127163021719" list="[[Tag Customers]]" modified="20201127182431885" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20201127173453663" modified="20201127173453663" title="$:/temp/advancedsearch">
@@ -11005,8 +11012,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20201127160835641" modified="20201127182030945" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
-<pre>!!! Run Reports &amp; Save to EVENT folder
+<div created="20201127160835641" modified="20201127182609405" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
+<pre>!! Run Reports &amp; Save to EVENT folder
 
 #Run Integrity `TK.INEGRITY.EVENT` including Counter Holds and fix any issues
 ##Rerun to 'H'--[[Open Case|https://paciolan.force.com/service/login]]
@@ -11014,7 +11021,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 #Run Audit `TK.AUDIT.R`, Order Detail `TK.ORDER.R`, and Ordered Seats `TK.OSEATS.R` to Excel and save to the [[Event Folder|file:///U:/Box%20Office/box/EVENT/]].
 ##Double check there are no amount owing/due for the event before proceeding.  Fix any issues. 
 
-!!! Account Tagging &amp; Checks
+!! Account Tagging &amp; Checks
 
 #[[Tag Customers]] with existing orders using `EC.EVENTCODE.QTY.PL.PT` as a template-- (eg:  EC.1MA22.3.2.A for Michael Bubble x 3, PL 2, PT A)
 ##Use  this [[report|https://equery.evenue.net/HALIFAX/?locale=en_CA#action=ReportDetails&amp;reportId=103677980]]
@@ -11046,7 +11053,30 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 #*''Salecode'':  CASINO
 #*''Paymode'':  Blank
 #*Either enter Casino House Account numbers manually under &quot;Customer&quot;, or create and use a &quot;[[Select List|Select Lists]]&quot;
-##Revisit Casino House accounts and sell credit balance to CAS.</pre>
+##Revisit Casino House accounts and sell to CAS, Salecode: CASINO.  You may run TK.ORDER.R on Credit Balance for list.</pre>
+</div>
+<div created="20201127182220677" modified="20201127183409172" tags="Customers Pac7 Import PacPlatform" title="Tag Customers">
+<pre>!!Create a CSV file with fields `CustomerID` and `TAG` you'd like to import.
+#Log onto Pac7 with Admin Credentials
+##Navigate to Accounts
+##&quot;Tools&quot; on the left hand side
+## &quot;Account Import&quot;
+
+#Choose &quot;TAG&quot; as the configuration
+#*It's been prepgrogrammed to pull 1st column as the Account Number and 2nd as TAG field.
+
+#Choose the CSV to to import
+#If it's the case, check ``Ignore the first record.  My data file has a header row``.
+
+#Next
+#&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/customertag.jpg]]
+
+#Double check the mapping, once in Review against the sample. 
+#*If incorrect, change CSV to match and start over.  
+
+#Give the job a name and leave an email if you'd like notification when complete.  Then, &quot;Submit&quot;
+#&gt;[img[https://raw.githubusercontent.com/ticketmonkeys/Manual/main/Images/customertagreview.jpg]]
+</pre>
 </div>
 
 
