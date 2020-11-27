@@ -9820,15 +9820,16 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20201127160835641" modified="20201127165318676" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
+<div created="20201127160835641" modified="20201127165717389" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
 <pre>!!! Run Reports &amp; Save to EVENT folder
 #Run Integrity including Counter Holds and fix any issues
 ##Rerun to 'H'--[[Open Case|https://paciolan.force.com/service/login]]
 #Run Audit, Order Detail, and Ordered Seats to Excel and save to the [[Event Folder|file:///U:/Box%20Office/box/EVENT/]].
 
 !!! Account Tagging &amp; Checks
-#[[Tag Customers]] with existing orders using `EC.EVENTCODE.QTY.PL.PT`-- (eg:  EC.1MA22.3.2.A)
-#Go into Events and un-group, un-tag for promoter reports.
+#[[Tag Customers]] with existing orders using `EC.EVENTCODE.QTY.PL.PT` as a template-- (eg:  EC.1MA22.3.2.A for Michael Bubble x 3, PL 2, PT A)
+#Go into Events `TK.EVENT.SEA.E` and remove group field, and any email address for promoter reports.
+##If a one off promoter report schedule, must be deleted from equerry. 
 #Run Audit, Order Detail, and Ordered Seats to Excel and save to event folder.
 ##Double check there are no amount owing/due for the event before proceeding.  Fix any issues. 
 #Run eQuery Report: Event Cancel - Paymode vs Account Type (Events - ODET version)
