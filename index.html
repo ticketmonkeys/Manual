@@ -185,6 +185,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Draft of 'Event Cancel'</li>
+
 <li>Event Cancel</li>
 
 </ul>
@@ -9616,16 +9618,16 @@ Error message and password prompt
 <div created="20201127153053552" modified="20201127161042971" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20201127161439005" modified="20201127161439005" title="$:/state/tab/moresidebar-1850697562">
+<div created="20201127161552796" modified="20201127161552796" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20201127161436426" modified="20201127161436426" title="$:/state/tab/sidebar--595412856">
+<div created="20201127161551051" modified="20201127161551051" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201127161440038" list="[[Event Cancel]]" modified="20201127161440038" title="$:/StoryList">
+<div created="20201127161553854" list="[[Draft of 'Event Cancel']]" modified="20201127161553854" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9795,7 +9797,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20201127160835641" modified="20201127161509297" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
+<div created="20201127160835641" draft.of="Event Cancel" draft.title="Event Cancel" modified="20201127161614838" tags="Event Cancel [[Order Fee]] Refund" title="Draft of 'Event Cancel'">
 <pre>#Run Counter Holds and fix any issue
 #Run Integrity and fix any issue
 ##Run to &quot;H&quot;--let know on case.
@@ -9813,6 +9815,25 @@ Error message and password prompt
 ##Paymodes:  MC, VI, AX
 ##Customer:  Individual
 ##Ticket Charge: Cancel (doesn't touch order charge)</pre>
+</div>
+<div created="20201127160835641" modified="20201127161152849" tags="Event Cancel [[Order Fee]] Refund" title="Event Cancel">
+<pre>#Run Counter Holds and fix any issue
+#Run Integrity and fix any issue
+##Run to &quot;H&quot;--let know on case.
+#Tag Customers with Order (EC.EVENTCODE.QTY.PL.PT-- eg:  EC.1MA22.3.2.A)
+#Go into Events and un-group, un-tag for promoter reports.
+#Run Audit, Order Detail, and Ordered Seats to Excel and save to event folder.
+##Double check there are no amount owing/due for the event before proceeding.  Fix any issues. 
+#Run eQuery Report: Event Cancel - Paymode vs Account Type (Events - ODET version)
+##Update Season Code &amp; Event Code and Run
+##Group by &quot;Account&quot; &amp; &quot;Mode&quot; and verify that all Individual accounts only have Credit Card payments.  Exclude those who haven't.
+##If Casino Event--Look under House Account &quot;H&quot;, and &quot;CAS&quot; note those account numbers.  They will also have to be returned separately.
+#Run Event Cancel on Individuals.  
+*Sale Code: A (straight online / phone orders)--may change depending on circumstance.  
+*CA Mode:  I
+*Paymodes:  MC, VI, AX
+*Customer:  Individual
+*Ticket Charge: Cancel (doesn't touch order charge)</pre>
 </div>
 
 
